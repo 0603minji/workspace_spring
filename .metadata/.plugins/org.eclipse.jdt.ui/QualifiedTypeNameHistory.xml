@@ -1,8 +1,2 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="spring.di.ui.InlineExamConsole"/>
-    <fullyQualifiedTypeName name="javax.management.InvalidApplicationException"/>
-    <fullyQualifiedTypeName name="spring_practice.di.entity.Exam"/>
-    <fullyQualifiedTypeName name="spring_practice.di.ui.GridExamConsole"/>
-    <fullyQualifiedTypeName name="org.springframework.context.ApplicationContext"/>
-</qualifiedTypeNameHistroy>
+<qualifiedTypeNameHistroy/>
