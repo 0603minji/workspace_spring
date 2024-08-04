@@ -1,0 +1,17 @@
+package spring.di.ui;
+
+import spring.di.entity.Exam;
+
+public class InlineExamConsole implements ExamConsole {
+	private Exam exam;
+	
+	public InlineExamConsole() {
+		// TODO Auto-generated constructor stub
+	}
+	@Override
+	public void print() {
+		System.out.printf("total is %d\navg is %.2f\n", exam.total(), exam.avg());
+
+	}
+
+}

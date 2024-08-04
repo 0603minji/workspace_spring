@@ -1,0 +1,18 @@
+package spring.di.ui;
+
+import spring.di.entity.Exam;
+
+public class GridExamConsole implements ExamConsole {
+
+	private Exam exam;
+	
+	@Override
+	public void print() {
+		System.out.println("┌─────────────────┐");
+		System.out.println("┃  total ┃   avg  ┃");
+		System.out.println("┃────────┃────────│");
+		 System.out.printf("┃   %d   ┃  %.2f  ┃\n");
+		System.out.println("└─────────────────┘");
+	}
+
+}

@@ -1,0 +1,16 @@
+package spring_practice.di.ui;
+
+import spring_practice.di.entity.Exam;
+
+public class GridExamConsole implements ExamConsoel {
+
+	private Exam exam;
+	@Override
+	public void print() {
+		System.out.println("--------------------");
+		System.out.println("  total      avg");
+		System.out.println("--------------------");
+		System.out.println("--------------------");
+	}
+
+}

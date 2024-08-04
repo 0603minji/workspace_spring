@@ -1,0 +1,13 @@
+package spring_practice.di;
+
+import spring_practice.di.entity.Exam;
+import spring_practice.di.entity.NewlecExam;
+
+public class Program {
+
+	public static void main(String[] args) {
+		Exam exam = new NewlecExam();
+		ExamConsoel console = new GridExamConsole();
+	}
+
+}

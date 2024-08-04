@@ -1,0 +1,44 @@
+/*
+5강.		Dependency를 직접 Injection하기
+6강.		스프링 DI 설정을 위해 이클립스 플러그인 설치하기
+7강.		스프링 DI 지시서 작성하기(Spring Bean Configuration)
+8강.		스프링 IoC 컨테이너 사용하기(ApplicationContext 이용하기)
+9강.		값 형식 DI
+10강.	생성자 DI
+*/
+package spring_practice.di;
+
+import spring_practice.di.entity.Exam;
+import spring_practice.di.entity.NewlecExam;
+import spring_practice.di.ui.ExamConsol;
+import spring_practice.di.ui.GridExamConsole;
+
+public class Program {
+
+	public static void main(String[] args) {
+		//	아래 부품 생성, 부품 조립 과정을 spring이 하도록 지시 필요
+		//	그래서 지시서 setting.xml 작성 필요
+		Exam exam = new NewlecExam();	//	부품 생성 (객체 생성)
+										//	Exam : interface
+										//	NewlecExam : 구현체
+		ExamConsol console = new GridExamConsole();	//	부품 생성 (객체 생성)
+													//	Exam : interface
+													//	NewlecExam : 구현체
+	//	ExamConsol console = new GredExamConsole(exam);	//	부품 조립 결합
+														//	1. 생성자로 결합
+		console.setExam(exam);	//	부품 조립 결합
+								//	2. setter로 결합
+		console.print();
+		
+		ApplicationContext context = new ClassPathXmlApplicationContext();
+		//	ApplicationContext :	DI 지시서를 읽고 생성, 조립하는 객체
+		//						Interface
+		//	ClassPathXmlApplicationContext :	ApplicationContext 인터페이스를 구현하는 클래스 종류
+		//										1.	ClassPathXmlApplication
+		//										2.	FileSystemXmlApplication
+		//										3.	XmlWebApplication
+		//										4.	AnnotationConfigApplication
+		
+	}
+
+}

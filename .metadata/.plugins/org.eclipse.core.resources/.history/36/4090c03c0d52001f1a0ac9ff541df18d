@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd">
+           
+           <!-- bean 태그를 통해서 생성할 객체(부품)를 지시 -->
+           <bean id="exam" class="spring.di.entitiy.NewlecExam"></bean>
+           <bean id="console" class="spring.di.ui.GridExamConsole"></bean>
+           
+           <!-- 부품 조립 지시  -->
+           property
+           
+           
+</beans>

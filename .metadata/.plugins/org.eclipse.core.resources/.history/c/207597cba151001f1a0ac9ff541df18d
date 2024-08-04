@@ -1,0 +1,33 @@
+package spring.di;
+
+import spring.di.entity.Exam;
+import spring.di.entity.NewlecExam;
+import spring.di.ui.ExamConsole;
+import spring.di.ui.GridExamConsole;
+import spring.di.ui.InlineExamConsole;
+
+public class Program {
+
+	public static void main(String[] args) {
+		Exam exam = new NewlecExam();
+		//	Exam : 인터페이스
+		//	NewlecExam : 구현체
+
+		//ExamConsole console = new InlineExamConsole(exam);
+		ExamConsole console = new GridExamConsole();
+		//	1. 생성자 결합
+		//	exam 객체를 InlineExamConsole에 결합 : DI
+		//	exam 객체를 GridExamConsole에 바꿔 끼워도 DI할 수 있지만
+		//	코드 수정이 필요
+		//	코드 수정없도록 exam 객체 생성부터 조립까지를 외부에서 설정하기
+		//	spring 사용 이유!
+		
+		console.setExam(exam);
+		//	2. setter 결합
+
+		
+		console.print();
+
+	}
+
+}

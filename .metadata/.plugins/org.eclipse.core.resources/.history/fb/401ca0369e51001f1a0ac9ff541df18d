@@ -1,0 +1,18 @@
+package spring.di;
+
+import spring.di.entity.Exam;
+import spring.di.entity.NewlecExam;
+
+public class Program {
+
+	public static void main(String[] args) {
+		Exam exam = new NewlecExam();
+		//	Exam : 인터페이스
+		//	NewlecExam : 구현체
+
+		ExamConsole console = new InlineExamConsole(exam);
+		ExamConsole console = new GridExamConsole(exam);
+
+	}
+
+}
